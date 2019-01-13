@@ -30,13 +30,14 @@ def bulk_tweet_shortener(tweets)
 end
 
 def selective_tweet_shortener(tweets)
-  tweets.split(" ").collect do |string|
-    if string.length > 140
-      word_substituter(string)
-    elsif string.length <= 140
-      string
-    end
-  end
+  #tweets.split(" ").collect do |string|
+   # if string.length > 140
+    #  word_substituter(string)
+    #elsif string.length <= 140
+     # string
+   # end
+#  end
+  tweets > 140 ? word_substituter(tweets) : tweets
 end
 
 def shortened_tweet_truncator(tweets)
